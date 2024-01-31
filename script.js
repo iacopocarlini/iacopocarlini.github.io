@@ -9,7 +9,6 @@ let maxSlide = slides.length - 1;
 
 const nextSlide = document.querySelector(".btn-next");
 nextSlide.addEventListener("click", function () {
-    console.log('click')
   if (curSlide === maxSlide) {
     curSlide = 0;
   } else {
