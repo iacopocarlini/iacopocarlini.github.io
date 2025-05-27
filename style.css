@@ -1,95 +1,98 @@
 :root {
-    --dark-bg-color: #F5F5F5;
+  --dark-bg-color: #f5f5f5;
 }
 
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
 }
 
-body {  
+body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
 
 .title {
-    font-weight: 800;
-    letter-spacing: -.025em;
-    text-align: center;
-    margin-bottom: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 800;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
 }
 
 section:nth-child(even) {
-    background: var(--dark-bg-color);
+  background: var(--dark-bg-color);
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    column-gap: 3rem;
-    row-gap: 3rem;
-    margin: 3rem 3rem; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  margin: 3rem 3rem;
 }
 
 .slider {
-    width: 100%;
-    height: 850px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-  }
-  
-  .slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: all 0.5s;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    z-index: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    font-size: 18px;
-  }
-  .btn:active {
-    transform: scale(1.1);
-  }
-  .btn-prev {
-    top: 45%;
-    left: 2%;
-  }
-  
-  .btn-next {
-    top: 45%;
-    right: 2%;
-  }
-  
+  width: 100%;
+  height: 850px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
 
+.slider:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .drone-pic {
-    width: 100%;
+  width: 100%;
 }
 
 .contacts-container {
@@ -101,33 +104,32 @@ section:nth-child(even) {
 }
 
 footer {
-    background: var(--dark-bg-color);
-    text-align: center;
-    padding: 3rem 3rem; 
+  background: var(--dark-bg-color);
+  text-align: center;
+  padding: 3rem 3rem;
 }
 
-@media screen and (min-width:700px) {
+@media screen and (min-width: 700px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+  }
 
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 3rem 3rem;
-    }
-
-    .skills-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
-        align-items: center;
-        column-gap: 3rem;
-        row-gap: 3rem;
-        margin: 3rem 3rem; 
-    }
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    margin: 3rem 3rem;
+  }
 }
 
-/* BUZZ OUT ANIMATION */ 
+/* BUZZ OUT ANIMATION */
 @-webkit-keyframes buzz-out-on-hover {
   10% {
     -webkit-transform: translateX(3px) rotate(2deg);
@@ -219,7 +221,9 @@ footer {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.buzz-out-on-hover:hover, .buzz-out-on-hover:focus, .buzz-out-on-hover:active {
+.buzz-out-on-hover:hover,
+.buzz-out-on-hover:focus,
+.buzz-out-on-hover:active {
   -webkit-animation-name: buzz-out-on-hover;
   animation-name: buzz-out-on-hover;
   -webkit-animation-duration: 0.75s;
