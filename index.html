@@ -1,129 +1,255 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
-    <title>Iacopo Carlini</title>
+    <title>Iacopo Carlini — Frontend Engineer</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏻‍💻</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Engineer based in Italy. I love basketball, trekking and drone flying.">
-    <meta property="og:title" content="Iacopo Carlini - Software Engineer">
+    <meta name="description" content="Iacopo Carlini — Frontend Engineer based in Milan, Italy. Specializing in React, TypeScript, and modern web applications.">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://iacopocarlini.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Iacopo Carlini — Frontend Engineer">
+    <meta property="og:description" content="Frontend Engineer based in Milan, Italy. Specializing in React, TypeScript, and modern web applications.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://iacopocarlini.github.io/public/img/me.webp">
     <meta property="og:url" content="https://iacopocarlini.github.io/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Iacopo Carlini — Frontend Engineer">
+    <meta name="twitter:description" content="Frontend Engineer based in Milan, Italy. Specializing in React, TypeScript, and modern web applications.">
+    <meta name="twitter:image" content="https://iacopocarlini.github.io/public/img/me.webp">
+
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://upload.wikimedia.org">
+    <link rel="preconnect" href="https://git-scm.com">
+
+    <!-- Inline critical: prevent flash of wrong theme -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Iacopo Carlini",
+        "jobTitle": "Frontend Engineer",
+        "url": "https://iacopocarlini.github.io/",
+        "image": "https://iacopocarlini.github.io/public/img/me.webp",
+        "sameAs": [
+            "https://github.com/iacopocarlini",
+            "https://www.linkedin.com/in/iacopo-carlini/"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Leithà"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Milan",
+            "addressCountry": "IT"
+        }
+    }
+    </script>
 </head>
 
 <body>
 
-    <!-- Presentation -->
-    <section>
-
-        <div>
-            <h1 class="title">
-                Iacopo Carlini - Software Engineer
-            </h1>
-            <p style="text-align: justify; hyphens: auto;">
-                Hi 👋 I am a Software Engineer based in Milan 🇮🇹
-                
-                with
-                <script>document.write(new Date().getFullYear() - 2021)</script>+
-                years of experience in building and maintaining
-            
-                complex Web Applications with several everyday users.
-                <br><br>
-                I love interacting with people and building stuff together as a team.
-                
-                I currently work as a Frontend Developer @<a href="https://leitha.eu/" target="_blank">Leithà</a>.
-            </p>
-        </div>
-
-        <img src="./public/img/me.webp" alt="profile picture" height="400px" />
-        <br>
-
-    </section>
-
-    <!-- Skills -->
-    <section>
-
-        <h2 class="title">Technologies I use</h2>
-
-        <div class="skills-container">
-
-            <a href="https://react.dev/" target="_blank"><img class="buzz-out-on-hover" loading="lazy" width="150"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png"
-                    alt="React" /></a>
-            <a href="https://www.typescriptlang.org/" target="_blank"><img class="buzz-out-on-hover" loading="lazy"
-                    width="100" src="./public/img/ts-logo.svg" alt="Javascript" /></a>
-            <a href="https://sass-lang.com/" target="_blank"><img class="buzz-out-on-hover" loading="lazy" width="100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
-                    alt="CSS" /></a>
-            <a href="https://nodejs.org/en" target="_blank"><img class="buzz-out-on-hover" loading="lazy" width="100"
-                    src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="NodeJS" /></a>
-            <a href="https://www.python.org/" target="_blank"><img class="buzz-out-on-hover" loading="lazy" width="100"
-                    src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
-                    alt="Python" /></a>
-            <a href="https://git-scm.com/" target="_blank"><img class="buzz-out-on-hover" loading="lazy" width="100"
-                    src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg" alt="Git" /></a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Hobbies -->
-    <section>
-
-        <h2 class="title">More about me...</h2>
-
-        <p>
-            I love playing basketball and do some drone flying.
-            <br>
-            <a href="https://iacopocarlini-ph.vercel.app/" target="_blank">Here</a> are some drone shots in the nature.
-        </p>
-
-        <br>
-        <br>
-
-       
-            <div class="slider">
-                
-                 <a href="https://iacopocarlini-ph.vercel.app/" target="_blank">
-
-                     <div class="slide">
-                         <img src="./public/drone/campocecina.jpg" alt="Campocecina" />
-                     </div>
-                 </a>
-    
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">IC</a>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#interests" data-i18n="nav.interests">Interests</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+                    <span class="lang-label">IT</span>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
             </div>
+        </div>
+    </nav>
 
-    </section>
+    <main>
 
+        <!-- Hero -->
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting" data-i18n="hero.greeting">Hi, I'm</p>
+                    <h1 class="hero-name">Iacopo Carlini</h1>
+                    <p class="hero-role">Frontend Engineer</p>
+                    <p class="hero-description" data-i18n="hero.description">
+                        Software Engineer based in Milan with
+                        <span id="years-experience"></span>+ years of experience
+                        building and maintaining complex web applications used daily by thousands of users.
+                        I thrive on collaboration and crafting elegant interfaces that people love to use.
+                    </p>
+                    <p class="hero-current" data-i18n="hero.current">
+                        Currently working as a Frontend Developer at
+                        <a href="https://leitha.eu/" target="_blank" rel="noopener noreferrer">Leithà</a>.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Get in touch</a>
+                        <a href="https://github.com/iacopocarlini" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="./public/img/me.webp" alt="Iacopo Carlini, Frontend Engineer" width="380" height="380" class="hero-image" fetchpriority="high">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills-section" id="skills">
+            <div class="section-inner">
+                <h2 class="section-title" data-i18n="skills.title">Technologies I work with</h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">My core toolkit for building modern web experiences</p>
+
+                <div class="skills-orbit">
+                    <div class="skills-orbit-ring skills-orbit-ring--1">
+                        <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="skill-node" data-skill="React" style="--angle: 0deg;">
+                            <img width="48" height="43" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" loading="lazy">
+                        </a>
+                        <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" class="skill-node" data-skill="TypeScript" style="--angle: 120deg;">
+                            <img width="48" height="48" src="./public/img/ts-logo.svg" alt="TypeScript" loading="lazy">
+                        </a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="skill-node" data-skill="CSS3" style="--angle: 240deg;">
+                            <img width="48" height="68" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="skills-orbit-ring skills-orbit-ring--2">
+                        <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer" class="skill-node" data-skill="Node.js" style="--angle: 60deg;">
+                            <img width="48" height="30" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js" loading="lazy">
+                        </a>
+                        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="skill-node" data-skill="Python" style="--angle: 180deg;">
+                            <img width="48" height="48" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python" loading="lazy">
+                        </a>
+                        <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="skill-node" data-skill="Git" style="--angle: 300deg;">
+                            <img width="48" height="20" src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg" alt="Git" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="skills-orbit-center">
+                        <span>&lt;/&gt;</span>
+                    </div>
+                </div>
+
+                <!-- Fallback grid for mobile -->
+                <div class="skills-grid-mobile">
+                    <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="skill-card">
+                        <img width="48" height="43" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" loading="lazy">
+                        <span>React</span>
+                    </a>
+                    <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" class="skill-card">
+                        <img width="48" height="48" src="./public/img/ts-logo.svg" alt="TypeScript" loading="lazy">
+                        <span>TypeScript</span>
+                    </a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="skill-card">
+                        <img width="48" height="68" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy">
+                        <span>CSS3</span>
+                    </a>
+                    <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer" class="skill-card">
+                        <img width="48" height="30" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js" loading="lazy">
+                        <span>Node.js</span>
+                    </a>
+                    <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="skill-card">
+                        <img width="48" height="48" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python" loading="lazy">
+                        <span>Python</span>
+                    </a>
+                    <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="skill-card">
+                        <img width="48" height="20" src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg" alt="Git" loading="lazy">
+                        <span>Git</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section class="interests-section" id="interests">
+            <div class="section-inner">
+                <h2 class="section-title" data-i18n="interests.title">Beyond the code</h2>
+                <p class="section-subtitle" data-i18n="interests.subtitle">When I'm not building for the web, you'll find me on the court or in the sky</p>
+
+                <div class="interests-cards">
+                    <div class="interest-card interest-card--basketball">
+                        <div class="interest-card-icon">
+                            <div class="model model-basketball" aria-hidden="true">
+                                <span class="bb-seam bb-seam--v"></span>
+                                <span class="bb-seam bb-seam--h"></span>
+                                <span class="bb-seam bb-seam--c"></span>
+                                <span class="bb-shine"></span>
+                            </div>
+                        </div>
+                        <h3 data-i18n="interests.basketball.title">Basketball</h3>
+                        <p data-i18n="interests.basketball.desc">I play regularly and love the teamwork dynamic on and off the court.</p>
+                    </div>
+                    <div class="interest-card interest-card--drone">
+                        <div class="interest-card-icon">
+                            <div class="model model-drone" aria-hidden="true">
+                                <span class="drone-arm drone-arm--1"><span class="drone-rotor"></span></span>
+                                <span class="drone-arm drone-arm--2"><span class="drone-rotor"></span></span>
+                                <span class="drone-arm drone-arm--3"><span class="drone-rotor"></span></span>
+                                <span class="drone-arm drone-arm--4"><span class="drone-rotor"></span></span>
+                                <span class="drone-body"></span>
+                            </div>
+                        </div>
+                        <h3 data-i18n="interests.drone.title">Drone Photography</h3>
+                        <p data-i18n="interests.drone.desc">Capturing breathtaking landscapes from a bird's eye perspective.</p>
+                    </div>
+                </div>
+
+                <a href="https://iacopocarlini-ph.vercel.app/" target="_blank" rel="noopener noreferrer" class="drone-showcase">
+                    <img src="./public/drone/campocecina.jpg" alt="Aerial drone shot of Campocecina, Italy" loading="lazy" width="800" height="600" class="drone-image">
+                    <div class="drone-overlay">
+                        <span class="drone-caption" data-i18n="interests.droneCta">View my aerial photography →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer>
-
-        <div>
-
-            <h2 class="title" data-key='contacts'>Contacts</h2>
-
+    <footer class="footer" id="contact">
+        <div class="section-inner">
+            <h2 class="section-title" data-i18n="footer.title">Let's connect</h2>
+            <br>
             <div class="contacts-container">
-                <a href="https://github.com/iacopocarlini" target="_blank"><img width="40" loading="lazy"
-                        src="./public/img/github-mark.svg" alt="GitHub" /></a>
-                <a href="https://www.linkedin.com/in/iacopo-carlini/" target="_blank"><img width="40" loading="lazy"
-                        src="./public/img/LI-In-Bug.png" alt="LinkedIn" /></a>
-                <a href="https://www.tiktok.com/@iacopo_carlini" target="_blank"><img width="40" loading="lazy"
-                        src="./public/img/tiktok.svg" alt="TikTok" /></a>
+                <a href="https://github.com/iacopocarlini" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub profile">
+                    <img width="32" height="32" src="./public/img/github-mark.svg" alt="" loading="lazy">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/iacopo-carlini/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile">
+                    <img width="32" height="32" src="./public/img/LI-In-Bug.png" alt="" loading="lazy">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.tiktok.com/@iacopo_carlini" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="TikTok profile">
+                    <img width="32" height="32" src="./public/img/tiktok.svg" alt="" loading="lazy">
+                    <span>TikTok</span>
+                </a>
             </div>
-
+            <p class="footer-copy">© <span id="current-year"></span> Iacopo Carlini</p>
         </div>
-
-        <p data-key='credits'>
-            ©
-            <script>document.write(/\d{4}/.exec(Date())[0])</script> - Iacopo Carlini
-        </p>
-
     </footer>
 
 </body>
